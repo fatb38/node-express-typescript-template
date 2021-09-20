@@ -1,0 +1,9 @@
+node_modules
+jspm_packages/
+npm-debug.log*
+build
+.idea
+.env
+.npm
+*.log
+.DS_Store

@@ -1,0 +1,28 @@
+{
+  "name": "node-express-typescript-template",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A from scratch template to create server app with NodeJS / Express / TypeScript",
+  "author": "fatb38",
+  "main": "src/app.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatb38/node-express-typescript-template.git"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^16.9.4",
+    "morgan": "^1.10.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
+  },
+  "license": "MIT"
+}
