@@ -1,9 +1,9 @@
-import { Router } from 'express';
+import { Request, Response, Router } from 'express';
 import user from './user';
 
 const router = Router();
 
-router.get('/', ((req, res) => {
+router.get('/', ((req: Request, res: Response) => {
     res.send('Coucou petite perruche !!');
 }));
 
