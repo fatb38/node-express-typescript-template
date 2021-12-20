@@ -1,12 +1,12 @@
-import { Request, Response, Router } from 'express';
-import user from './user';
+import { Request, Response, Router } from 'express'
+import user from './user'
 
-const router = Router();
+const router = Router()
 
 router.get('/', ((req: Request, res: Response) => {
-    res.send('Coucou petite perruche !!');
-}));
+  res.send('Coucou petite perruche !!')
+}))
 
-router.use('/api/user', user);
+router.use('/api/user', user)
 
-export default router;
+export default router
