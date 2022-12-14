@@ -4,8 +4,15 @@ module.exports = {
     node: true
   },
   extends: [
-    'airbnb-base'
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended'
   ],
+  overrides: [{
+    files: ['*.test.*'],
+    rules: {
+      'import/no-extraneous-dependencies': 'off'
+    }
+  }],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,

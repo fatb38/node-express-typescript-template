@@ -4,7 +4,7 @@ import { Server, createServer } from 'http'
 import dotenv from 'dotenv'
 import logger from 'morgan'
 import helmet from 'helmet'
-import routes from './routes'
+import routes from './routes/index.routes'
 
 const app: Application = express()
 const server: Server = createServer(app)
