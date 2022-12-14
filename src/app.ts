@@ -1,14 +1,18 @@
 /* App Initialization */
 import express, { Application } from 'express'
 import { Server, createServer } from 'http'
+import dotenv from 'dotenv'
 import logger from 'morgan'
+import helmet from 'helmet'
 import routes from './routes'
 
 const app: Application = express()
 const server: Server = createServer(app)
 const port = process.env.PORT || 3000
 
-// Logger
+/* Plugins */
+dotenv.config()
+app.use(helmet())
 app.use(logger('dev'))
 
 // Routing
