@@ -1,6 +1,6 @@
 {
   "name": "node-express-typescript-template",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "description": "A from scratch template to create server app with NodeJS / Express / TypeScript",
   "author": "fatb38",
