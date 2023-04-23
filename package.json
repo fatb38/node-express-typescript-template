@@ -1,6 +1,6 @@
 {
   "name": "node-express-typescript-template",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": false,
   "description": "A from scratch template to create server app with NodeJS / Express / TypeScript",
   "author": "fatb38",
@@ -14,6 +14,7 @@
     "clean": "rm -rf build coverage",
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "lint": "eslint . --ext .ts",
+    "start": "node build/app.js",
     "test": "jest"
   },
   "dependencies": {
