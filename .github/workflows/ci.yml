@@ -7,26 +7,56 @@ on:
     branches: [ "main" ]
 
 jobs:
-  lint_test_build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js 16
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           cache: 'npm'
 
-      - name: Installing dependencies
+      - name: install-dependencies
         run: npm ci
 
       - name: Lint
         run: npm run lint
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: install-dependencies
+        run: npm ci
+
       - name: Test
         run: npm run test
 
-      - name: Build
-        run: npm run build
+  check-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: install-dependencies
+        run: npm ci
+
+      - name: Check build
+        run: npm run ts-check
