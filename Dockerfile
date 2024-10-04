@@ -1,11 +1,11 @@
-FROM node:18.16-slim AS builder
+FROM node:20.17-slim AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-FROM node:18.16-slim AS server
+FROM node:20.17-slim AS server
 WORKDIR /app
 ENV PORT $PORT
 COPY package* ./
